@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+
+.btnPlate {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#fieldGrid {
+    width: 600px;
+    height: 600px;
+    border: 1px solid skyblue;
+    margin: auto;
+}
