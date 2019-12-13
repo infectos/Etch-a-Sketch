@@ -56,7 +56,8 @@ clearBtn.addEventListener('click', () => {
         cell.style.backgroundColor = 'white';
         cell.style.filter = '';
     })
-})
+});
+clearBtn.addEventListener('click',stopListen);
 
 // This applies 'randomen' func listener to all cells
 function randomColor() {
