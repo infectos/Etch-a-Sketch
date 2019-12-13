@@ -5,7 +5,7 @@ function createCell(number) {
     newCell.id = number;
     newCell.classList.add('cell');
     newCell.classList.add('brightness-0');
-    newCell.setAttribute('style', 'border: 1px solid gray; background-color: white');
+    newCell.setAttribute('style', 'background-color: white');
     const grid = document.querySelector('#fieldGrid');
     grid.appendChild(newCell);
 }
@@ -25,7 +25,7 @@ function resize(size = 16) {
     const grid = document.querySelector('#fieldGrid');
 
     grid.setAttribute('style', `display: grid; grid-template-rows: repeat(${size}, auto); 
-        grid-template-columns: repeat(${size}, auto)`);
+        grid-template-columns: repeat(${size}, auto); grid-gap: 1px; background-color: skyblue`);
 
     while (grid.firstChild) {
         grid.removeChild(grid.firstChild);
@@ -72,6 +72,7 @@ function randomen () {
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
     this.style.backgroundColor = `rgb(${r},${g},${b})`;
+    this.style.filter = "";
 }
 
 // Firstly it removes all the listeners from the field, so you will not able to paint black and random color at the same time.
@@ -91,6 +92,7 @@ function blackColor() {
 // This creates a black color and applies it to 'this'
 function blacken () {
     this.style.backgroundColor = 'black';
+    this.style.filter = "";
 }
 
 // Firstly it removes all the listeners from the field, so you will not able to paint black and random color at the same time.
